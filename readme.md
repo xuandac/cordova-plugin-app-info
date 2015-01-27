@@ -12,7 +12,9 @@ Usage
 ===
 
 ```JavaScript
-window.cordova.getAppInfo(
+ document.addEventListener("deviceready", onDeviceReady, false);
+	function onDeviceReady() {
+cordova.getAppInfo(
 	function(info){
     	alert(
     			'Is Debug: ' + info.debug 
@@ -24,12 +26,13 @@ window.cordova.getAppInfo(
 	    alert(err);
 	}
 );
+}
 ```
 
 Installation
 ===
 ```bash
-cordova plugins add 'https://github.com/welldone-software/cordova-plugin-app-info.git'
+cordova plugins add https://github.com/xuandac/cordova-plugin-app-info.git
 ```
 
 iOS quriks
